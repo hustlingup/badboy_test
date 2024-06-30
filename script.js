@@ -106,7 +106,7 @@ $(document).ready(function() {
         
         const result = {
             title: `<b>이 남자의 나쁜남자 성향</b> ${percentage}`,
-            image: `../badboy_test/img/result_${totalPoints}.jpg`,
+            image: `img/result_${totalPoints}.jpg`,
             description: `${description}`
         };
 

@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Pretendard, sans-serif;
+}
+
+.ads {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px; /* Typical width for vertical ads */
+}
+
+.ads:first-child {
+    left: 0;
+}
+
+.ads:last-child {
+    right: 0;
+}
+
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-top: 1px solid #e7e7e7;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .img-fluid {
+    max-width: 150px;
+}
+
+.footer .text-uppercase {
+    font-weight: bold;
+}
+
+.footer .list-unstyled {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .list-unstyled li {
+    margin-bottom: 10px;
+}
+
+.footer .text-dark {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer .text-dark:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) { /* Tablets and larger screens */
+    .container {
+        max-width: 60%; 
+        margin: auto;
+    }
+}
+
+@media (max-width: 767.98px) { /* Mobile devices */
+    .container {
+        max-width: 80%;
+        margin: auto;
+    }
+}
+
+#question-container {
+    width: 100%; 
+}
+
+
+
+.response-btn {
+    width: 100%; 
+}
+
+.result-advanced-btn {
+    width: 80%; 
+}
+
+@media (min-width: 768px) { /* Tablets and larger screens */
+    .response-btn {
+        max-width: 80%; /* Increased max width for larger screens */
+        margin: auto; /* Center align buttons */
+    }
+
+    #result-img {
+        max-width: 500px;
+    }
+}

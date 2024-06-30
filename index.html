@@ -16,7 +16,10 @@
         <p class="mt-3">내 썸남 or 남자친구는 <br> 얼마나 나쁜남자일까?</p>
         <button class="btn btn-primary mt-3" id="start-btn">테스트 시작하기</button>
     
-        <p class="mt-3">현재 총 <span id="test-takers-count">0</span>명이 참여했어요.</p><br>
+        <p class="mt-3">현재 총 <span id="test-takers-count">
+                <!-- counter code -->
+                <a href='https://www.counter12.com'><img src='https://www.counter12.com/img-1y1WZc84x3Ax6Yxc-15.gif' alt='free web counter'></a><script type='text/javascript' src='https://www.counter12.com/ad.js?id=1y1WZc84x3Ax6Yxc'></script>
+        </span>명이 참여했어요.</p><br>
         <button class="btn btn-danger mt-3" id="advanced-btn">✨심화버전 하러가기✨</button>
     </div>
 
@@ -43,23 +46,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        $(document).ready(function() {
-            // Fetch the current counter value from the server
-            $.get('counter.php', function(data) {
-                $('#test-takers-count').text(data.count);
-            });
-
-            // Increment the counter when the start button is clicked
-            $('#start-btn').click(function() {
-                $.post('counter.php', function(data) {
-                    $('#test-takers-count').text(data.count);
-                    // Proceed to the test
-                    window.location.href = 'quiz.html';
-                });
-            });
-        });
-    </script>
     <script src="script.js"></script>
 </body>
 </html>

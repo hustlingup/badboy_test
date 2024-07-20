@@ -27,8 +27,8 @@ $(document).ready(function() {
     let currentQuestionIndex = 0;
     let totalPoints = 0;
 
-    // Shuffle array function
-    function shuffle(array) {
+     // Shuffle array function
+     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
@@ -54,6 +54,7 @@ $(document).ready(function() {
             </div>
         `;
         $('#question-container').html(questionHTML);
+        updateProgressBar(); // Ensure progress bar is updated when a new question is shown
     }
 
     $(document).on('click', '.response-btn', function() {
@@ -73,6 +74,10 @@ $(document).ready(function() {
             window.location.href = 'result.html';
         }
     });
+    function updateProgressBar() {
+        const progress = (currentQuestionIndex / questions.length) * 100;
+        $('#progress-bar').css('width', `${progress}%`).attr('aria-valuenow', progress);
+    }
 
     function showResult() {
         const totalPoints = parseInt(sessionStorage.getItem('totalPoints'), 10);
@@ -191,11 +196,12 @@ $(document).ready(function() {
         $('#result-container').html(resultHTML);
     }
 
-    if (window.location.pathname.endsWith('quiz.html')) {
+    if ($('#question-container').length) {
         showQuestion(currentQuestionIndex);
+        updateProgressBar();
     }
 
-    if (window.location.pathname.endsWith('result.html')) {
+    if ($('#result-container').length) {
         showResult();
     }
 });

@@ -188,10 +188,6 @@ body {
 }
 
 @media (max-width: 767.98px) { /* Mobile devices */
-    .ads {
-        display: none;
-    }
-}
 
 /* Adjust image size on larger screens */
 .result-image {

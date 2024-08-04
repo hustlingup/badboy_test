@@ -96,37 +96,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
     <!-- 공유기능 -->
-    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
-    integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
-    <script>
-        Kakao.init('217174c0293ad5bcc1ff56a298a731a7'); 
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script type='text/javascript'>
+
+        Kakao.init('217174c0293ad5bcc1ff56a298a731a7');
+        // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+        Kakao.Link.createCustomButton({
+        container: '#kakaotalk-sharing-btn',
+        templateId: 110784
+    });
+
     </script>
-    <script>
-        Kakao.Share.createDefaultButton({
-          container: '#kakaotalk-sharing-btn',
-          objectType: 'feed',
-          content: {
-            title: '나쁜남자 테스트 | 일반버전',
-            description: '#남사친 #썸남 #남친 #남편',
-            imageUrl:
-              '../img/kakao_share.png',
-            link: {
-              mobileWebUrl: 'https://badboytest.info',
-              webUrl: 'hhttps://badboytest.info',
-            },
-          },
-          buttons: [
-            {
-              title: '나쁜남자 테스트 하러가기',
-              link: {
-                mobileWebUrl: 'https://badboytest.info',
-                webUrl: 'https://badboytest.info',
-              },
-            },
-            
-          ],
-        });
-      </script>
       <script>
         function copyLink() {
         var copyText = document.getElementById("copy-link");

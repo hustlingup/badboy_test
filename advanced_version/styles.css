@@ -93,6 +93,7 @@ body {
     align-items: center;
     justify-content: space-between;
     margin: 10px 0;
+    width: 100%; /* Ensure result-row takes full width of its container */
 }
 
 .text-area, .percentage-area, .gauge-container {
@@ -162,7 +163,8 @@ body {
 }
 
 .footer .img-fluid {
-    max-width: 150px;
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto;
 }
 
 .footer .text-uppercase {
@@ -187,37 +189,37 @@ body {
     text-decoration: underline;
 }
 
+/* Media queries for responsive images */
 @media (max-width: 767.98px) { /* Mobile devices */
-
-/* Adjust image size on larger screens */
-.result-image {
-    max-width: 100%;
-    height: auto;
+    .result-image {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
+@media (min-width: 768px) and (max-width: 1023.98px) { /* Tablets and larger screens */
+    .result-image {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 1024px) { /* Larger screens */
+    .result-image {
+        max-width: 50%;
+    }
+}
+
+/* Container adjustments */
 @media (min-width: 768px) {
-    .result-image {
-        max-width: 500px; /* Adjust this value as needed */
-    }
-}
-
-@media (min-width: 1200px) {
-    .result-image {
-        max-width: 700px; /* Adjust this value as needed */
-    }
-}
-
-@media (min-width: 768px) { /* Tablets and larger screens */
     .container {
         max-width: 500px;
         margin: auto;
     }
 }
 
-@media (max-width: 767.98px) { /* Mobile devices */
+@media (max-width: 767.98px) {
     .container {
         max-width: 100%;
         margin: auto;
     }
-}
 }

@@ -50,9 +50,38 @@
         <button class="btn btn-danger mt-3 btn-block response-btn" onclick="window.location.href='index.html'">다시하기</button>
         <button class="btn btn-primary mt-3 btn-block response-btn" onclick="window.location.href='../index.html'">일반 버전 하러가기</button>
     </div>
+    <div class="container share-buttn text-center mt-3">
+        <h5><b>공유하기</b></h5>
+        <input type="text" value="https://badboytest.info/advanced_version/" id="copy-link" hidden>
+        <img src="../img/copylink.png" height="70" width="70" onclick="copyLink()">
+        <a id="kakaotalk-sharing-btn" href="javascript:;">
+            <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+              alt="카카오톡 공유 보내기 버튼" />
+          </a>
+    </div>
     <!-- Include jQuery before script.js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <!-- 공유기능 -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script type='text/javascript'>
+        Kakao.init('217174c0293ad5bcc1ff56a298a731a7');
+        // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+        Kakao.Link.createCustomButton({
+        container: '#kakaotalk-sharing-btn',
+        templateId: 110784
+    });
+    </script>
+      <script>
+        function copyLink() {
+        var copyText = document.getElementById("copy-link");
+        copyText.hidden = false;
+        copyText.select();
+        document.execCommand("copy");
+        copyText.hidden = true;
+        alert("URL을 복사했습니다.");
+      }
+      </script>
 </body>
     <footer class="footer bg-light text-center text-lg-start mt-5">
         <div class="row">

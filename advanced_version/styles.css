@@ -1,0 +1,225 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: Pretendard, sans-serif;
+}
+
+.card {
+    background-color: #ffffff; /* White background for card */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.responses {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0;
+    list-style-type: none;
+}
+
+.responses li {
+    position: relative;
+    margin: 0 5px;
+}
+
+.responses input[type="radio"] {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(183, 183, 183);
+    cursor: pointer;
+    outline: none;
+    margin: 0 10px;
+}
+
+.responses input[type="radio"]::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #ffffff; /* White border to make it distinct */
+}
+
+.responses input[type="radio"]:checked {
+    background-color: inherit; /* This will inherit the gradient background from the parent */
+}
+
+.responses input[type="radio"]:checked::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    background: #fff;
+}
+
+/* Color for each radio button */
+.responses li:nth-child(1) input[type="radio"]:checked {
+    background-color: rgb(246, 30, 30);
+}
+
+.responses li:nth-child(2) input[type="radio"]:checked {
+    background-color: rgb(255, 89, 86);
+}
+
+.responses li:nth-child(3) input[type="radio"]:checked {
+    background-color: rgb(166, 0, 203);
+}
+
+.responses li:nth-child(4) input[type="radio"]:checked {
+    background-color: rgb(33, 120, 251);
+}
+
+.responses li:nth-child(5) input[type="radio"]:checked {
+    background-color: rgb(50, 50, 226);
+}
+
+.hidden-text {
+    display: none;
+}
+
+.result-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    width: 100%; /* Ensure result-row takes full width of its container */
+}
+
+.text-area, .percentage-area, .gauge-container {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.text-area {
+    flex: 4;
+    text-align: left;
+}
+
+.percentage-area {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.gauge-container {
+    flex: 5;
+}
+
+.gauge {
+    width: 100%;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.gauge .fill {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.gauge .fill.narcissism {
+    background: linear-gradient(to right, rgb(255, 255, 91), rgb(255, 230, 40));
+}
+
+.gauge .fill.machiavellian {
+    background: linear-gradient(to right, rgb(255, 91, 91), rgb(255, 51, 51));
+}
+
+.gauge .fill.psychopathy {
+    background: linear-gradient(to right, rgb(83, 83, 255), rgb(44, 44, 255));
+}
+
+.gauge-label {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    border-top: 1px solid #e7e7e7;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .img-fluid {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto;
+}
+
+.footer .text-uppercase {
+    font-weight: bold;
+}
+
+.footer .list-unstyled {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .list-unstyled li {
+    margin-bottom: 10px;
+}
+
+.footer .text-dark {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer .text-dark:hover {
+    text-decoration: underline;
+}
+
+/* Media queries for responsive images */
+@media (max-width: 767.98px) { /* Mobile devices */
+    .result-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) { /* Tablets and larger screens */
+    .result-image {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 1024px) { /* Larger screens */
+    .result-image {
+        max-width: 50%;
+    }
+}
+
+/* Container adjustments */
+@media (min-width: 768px) {
+    .container {
+        max-width: 500px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 100%;
+        margin: auto;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나쁜남자 테스트(심화) 결과</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h2>테스트 결과</h2>
+        <img src="../advanced_version/img/1.jpg" alt="Result Image" class="img-fluid mt-4">
+        <div class="result-description mt-3">
+            <h4><b>아주 약간 나쁜남자 끼가있는 이 남자</b></h4>
+            <p>인생 파트너로 영구귀속 시키세요. 약간의 모험심과 불확실성은 그의 매력이에요.
+                <br>단기적으로나 장기적으로나 이런 남자와 같이하는 인생은 따분하지도 고통받지도 않을 가능성이 높아요.
+            </p>
+        </div>
+        <button class="btn btn-warning mt-3 btn-block" onclick="window.location.href='all.html'">모든 유형 보기</button>
+        <button class="btn btn-danger mt-3 btn-block" onclick="window.location.href='index.html'">다시하기</button>
+        <button class="btn btn-primary mt-3 btn-block" onclick="window.location.href='../index.html'">일반 버전 하러가기</button>
+    </div>
+    <div class="container share-buttn text-center mt-3">
+        <h5><b>공유하기</b></h5>
+        <input type="text" value="https://badboytest.info/advance_version/result_1.html" id="copy-link" hidden>
+        <img src="../img/copylink.png" height="70" width="70" onclick="copyLink()">
+        <a id="kakaotalk-sharing-btn" href="javascript:;">
+            <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+              alt="카카오톡 공유 보내기 버튼" />
+          </a>
+    </div>  
+    <!-- Include jQuery before script.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <!-- 공유기능 -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script type='text/javascript'>
+        Kakao.init('217174c0293ad5bcc1ff56a298a731a7');
+        // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+        Kakao.Link.createCustomButton({
+        container: '#kakaotalk-sharing-btn',
+        templateId: 111735
+    });
+    </script>
+    <script>
+        function copyLink() {
+        var copyText = document.getElementById("copy-link");
+        copyText.hidden = false;
+        copyText.select();
+        document.execCommand("copy");
+        copyText.hidden = true;
+        alert("URL을 복사했습니다.");
+      }
+    </script>
+</body>
+<footer class="footer bg-light text-center text-lg-start mt-5">
+    <div class="row">
+        <div class="d-grid gap-2 col-12 col-md-6 mx-auto">
+            <img src="../advanced_version/img/logo.png" alt="Logo" class="img-fluid mb-3">
+            <h5 class="text-uppercase">ADVANCED BAD BOY TEST</h5>
+            <p>나쁜남자 테스트 심화버전</p>
+            <ul class="list-unstyled mb-0">
+                <li>
+                    <a href="../about.html">About</a>
+                    <a href="../privacy.html">Privacy</a>
+                    <a href="../reference.html">Reference</a>
+                </li>
+                <li><p class="mb-0">© 2024 허슬업. All rights reserved.</p></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</html>

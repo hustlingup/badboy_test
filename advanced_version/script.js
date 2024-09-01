@@ -3,6 +3,7 @@ $(document).ready(function() {
     $('#start-btn').click(function() {
         window.location.href = 'quiz.html';
     });
+
     // Normal test button click event
     $('#normal-btn').click(function() {
         window.location.href = '../index.html';
@@ -87,32 +88,73 @@ $(document).ready(function() {
             }
         });
 
-       // Convert scores to percentages
-       const maxScore = 4 * (totalQuestions / 3); // 4 is the max score per question and totalQuestions/3 is number of questions per trait
-       results.narcissism = (results.narcissism / maxScore) * 100;
-       results.machiavellian = (results.machiavellian / maxScore) * 100;
-       results.psychopathy = (results.psychopathy / maxScore) * 100;
+        // Convert scores to percentages
+        const maxScore = 4 * (totalQuestions / 3); // 4 is the max score per question and totalQuestions/3 is number of questions per trait
+        results.narcissism = (results.narcissism / maxScore) * 100;
+        results.machiavellian = (results.machiavellian / maxScore) * 100;
+        results.psychopathy = (results.psychopathy / maxScore) * 100;
 
-       // Calculate total percentage
-       const totalPercentage = results.narcissism + results.machiavellian + results.psychopathy;
+        // Save results to local storage
+        localStorage.setItem('testResults', JSON.stringify(results));
 
-       // Redirect to the appropriate result page based on the totalPercentage
-       if (totalPercentage === 0) {
-           window.location.href = 'result_0.html';
-       } else if (totalPercentage > 0 && totalPercentage <= 42.86) {
-           window.location.href = 'result_1.html';
-       } else if (totalPercentage > 42.86 && totalPercentage <= 85.71) {
-           window.location.href = 'result_2.html';
-       } else if (totalPercentage > 85.71 && totalPercentage <= 128.57) {
-           window.location.href = 'result_3.html';
-       } else if (totalPercentage > 128.57 && totalPercentage <= 171.43) {
-           window.location.href = 'result_4.html';
-       } else if (totalPercentage > 171.43 && totalPercentage <= 214.29) {
-           window.location.href = 'result_5.html';
-       } else if (totalPercentage > 214.29 && totalPercentage <= 257.14) {
-           window.location.href = 'result_6.html';
-       } else if (totalPercentage > 257.14 && totalPercentage <= 300) {
-           window.location.href = 'result_7.html';
-       } 
-   }
+        // Calculate total percentage
+        const totalPercentage = results.narcissism + results.machiavellian + results.psychopathy;
+
+        // Redirect to the appropriate result page based on the totalPercentage
+        if (totalPercentage === 0) {
+            window.location.href = 'result_0.html';
+        } else if (totalPercentage > 0 && totalPercentage <= 42.86) {
+            window.location.href = 'result_1.html';
+        } else if (totalPercentage > 42.86 && totalPercentage <= 85.71) {
+            window.location.href = 'result_2.html';
+        } else if (totalPercentage > 85.71 && totalPercentage <= 128.57) {
+            window.location.href = 'result_3.html';
+        } else if (totalPercentage > 128.57 && totalPercentage <= 171.43) {
+            window.location.href = 'result_4.html';
+        } else if (totalPercentage > 171.43 && totalPercentage <= 214.29) {
+            window.location.href = 'result_5.html';
+        } else if (totalPercentage > 214.29 && totalPercentage <= 257.14) {
+            window.location.href = 'result_6.html';
+        } else if (totalPercentage > 257.14 && totalPercentage <= 300) {
+            window.location.href = 'result_7.html';
+        }
+    }
+
+    // Display results on all result pages (result_0.html to result_7.html)
+    if (window.location.pathname.match(/result_[0-7]\.html$/)) {
+        const results = JSON.parse(localStorage.getItem('testResults'));
+        if (results) {
+            document.getElementById('resultContainer').innerHTML = `
+                <div>
+                    <div class="result-row mt-3">
+                        <div class="text-area">나르시시스트:</div>
+                        <div class="percentage-area">${results.narcissism.toFixed(2)}%</div>
+                        <div class="gauge-container">
+                            <div class="gauge">
+                                <div class="fill narcissism" style="width: ${results.narcissism}%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-row">
+                        <div class="text-area">마키아벨리안:</div>
+                        <div class="percentage-area">${results.machiavellian.toFixed(2)}%</div>
+                        <div class="gauge-container">
+                            <div class="gauge">
+                                <div class="fill machiavellian" style="width: ${results.machiavellian}%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-row">
+                        <div class="text-area">정신병질:</div>
+                        <div class="percentage-area">${results.psychopathy.toFixed(2)}%</div>
+                        <div class="gauge-container">
+                            <div class="gauge">
+                                <div class="fill psychopathy" style="width: ${results.psychopathy}%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+    }
 });

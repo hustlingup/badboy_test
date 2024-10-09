@@ -43,6 +43,14 @@ body {
     text-decoration: underline;
 }
 
+/* Disable hover styles on touch devices */
+@media (hover: none) {
+    .btn-outline-secondary:hover {
+        background-color: transparent;
+        color: inherit;
+    }
+}
+
 /* Image width adjustments */
 .result-image {
     width: 100%;

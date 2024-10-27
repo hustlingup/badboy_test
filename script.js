@@ -9,6 +9,10 @@ $(document).ready(function() {
         window.location.href = 'advanced_version/index.html';
     });
 
+    $('#myman-btn').click(function() {
+        window.location.href = 'myman/index.html';
+    });
+
    // Questions data
    const questions = [
     { question: "이 남자의 외모는?", responses: ["보통이다", "가끔 잘생겼다는 이야기를 듣는다", "훈남이다", "너무 잘생겨서 불안하다"], image: '../img/qimage01.jpg' },

@@ -8,6 +8,10 @@ $(document).ready(function() {
     $('#normal-btn').click(function() {
         window.location.href = '../index.html';
     });
+    
+    $('#myman-btn').click(function() {
+        window.location.href = '../myman/index.html';
+    });
 
     const questions = [
         { question: "1. 그는 다른 사람들이 자신을 존경해 주기를 바라는 경향이 있다.", responses: ["전혀 아니다", "조금 그렇다", "보통이다", "대체로 그렇다", "매우 그렇다"] },

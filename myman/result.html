@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0825L04287"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0825L04287');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결과</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6791974364232767"
+     crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background: linear-gradient(to bottom, #FEEBF3, #FCE9E6); /* Softer pastel gradient */
+            color: #5D3A3A; /* Muted dark color */
+            text-align: center;
+            padding: 20px;
+        }
+
+        .result-container {
+            background: #FFF6FA; /* Subtle background for results container */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-weight: 700;
+            color: #d63384; /* Accent color for main headings */
+        }
+
+        h4 {
+            font-weight: 600;
+            color: #8F4E4E;
+        }
+
+        .option-list {
+            text-align: left;
+            display: inline-block;
+            margin-top: 20px;
+            padding: 0;
+            color: #5D3A3A;
+        }
+
+        .option-list li {
+            list-style: none;
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        .percentage-wrapper {
+            margin-bottom: 10px;
+        }
+
+        .country-label {
+            font-size: 1em;
+            font-weight: bold;
+            color: #8E5A5A;
+            margin-bottom: -10px; /* Adjust spacing to bring closer to the percentage */
+        }
+
+        #resultPercentage {
+            font-size: 3em; /* Large font size for impact */
+            font-weight: bold;
+            color: #D63384;
+        }
+
+        #resultCount {
+            font-size: 1.1em;
+            font-weight: 500;
+            color: #A65858;
+        }
+
+        #note {
+            color: #B48B8B;
+            font-size: 0.85em;
+            margin-top: 15px;
+        }
+
+        #advise {
+            font-size: 1em;
+            font-weight: 400;
+            color: #6E3D3D;
+            line-height: 1.6;
+            margin-top: 20px;
+            padding: 0 15px;
+        }
+        
+        .btn-back {
+            margin-top: 20px;
+            font-weight: 500;
+            color: #fff;
+            background-color: #d63384; /* Button color to match heading */
+            border-color: #d63384;
+        }
+
+        .btn-back:hover {
+            background-color: #c12b6f;
+            border-color: #c12b6f;
+        }
+
+        /* Result container for responsive design */
+        .result-container {
+            background: #FFF6FA;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            width: 100%; /* Full width for small screens */
+            max-width: 100%; /* Prevent overflow */
+        }
+
+        /* Center container with 30% width on larger screens */
+        @media (min-width: 992px) {
+            .result-container {
+                width: 30%;
+                margin: 20px auto; /* Center align */
+            }
+        }
+        .footer {
+            padding: 20px;
+            background-color: #F8F4F2;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="https://badboytest.info/">
+            <img src="../img/logo.png" alt="Logo" width="40" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://badboytest.info/index.html">일반버전</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://badboytest.info/advanced_version/index.html">심화버전</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://badboytest.info/myman/index.html">내 남자의 조건</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <h2>결과</h2>
+    <div class="container result-container">
+        <h4>내가 원하는 남자는<br></h4>
+        
+        <!-- Wrapper for 대한민국 label and percentage -->
+        <div class="percentage-wrapper">
+            <div class="country-label">대한민국</div>
+            <div id="resultPercentage"></div>
+        </div>
+        <p id="resultCount"></p>
+        <img id="randomImage" alt="Result Image" class="img-fluid mb-4" style="max-width: 100%; border-radius: 10px;">
+        <p id="advise"></p>
+    </div>
+    <div class="container result-container">    
+        <h4 class="mb-1">선택한 조건</h4>
+        <ul id="selectedOptions" class="option-list mt-1"></ul>
+        <p id="note"></p>
+    </div>
+    <div class="container share-buttn text-center mt-3">
+        <h5><b>공유하기</b></h5>
+        <input type="text" value="https://badboytest.info/myman/index.html" id="copy-link" hidden>
+        <img src="../img/copylink.png" height="70" width="70" onclick="copyLink()">
+        <a id="kakaotalk-sharing-btn" href="javascript:;">
+            <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+              alt="카카오톡 공유 보내기 버튼" />
+          </a>
+    </div>    
+    <div class="container result-container">    
+        <h5 class="mt-2"><b>데이터 출처</b></h5>
+        <p>인구정보: 「인구총조사」, 통계청</p>
+        <p>연령정보: 「인구총조사」, 통계청</p>
+        <p>신체정보: 제8차 인체치수조사, 국가기술표준원</p>
+        <p>소득정보: 「일자리행정통계」, 통계청</p>
+        <p>지역정보: 「주민등록인구현황」, 행정안전부</p>
+        <!-- Back button for better navigation experience -->
+        
+    </div>
+    <button onclick="window.history.back()" class="btn btn-back">돌아가기</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const totalPopulation = 18281800;
+            const resultCount = parseInt(sessionStorage.getItem('resultCount'), 10);
+
+            // Format resultCount with commas
+            const formattedResultCount = resultCount.toLocaleString('ko-KR');
+
+            // Calculate percentage
+            const resultPercentage = ((resultCount / totalPopulation) * 100).toFixed(4);
+
+            document.getElementById('resultPercentage').textContent = `${resultPercentage}%`;
+            document.getElementById('resultCount').textContent = `(20세~69세 성인남성 18,281,800명 중 ${formattedResultCount}명)`;
+            document.getElementById('note').textContent = `본 수치는 참고 가능한 분야별 통계자료 내에서 각각 다른년도의 데이터를 조합하고 가공한 결과로 실제와 다를 수 있습니다.`;
+            document.getElementById('advise').textContent = `장기적인 만남이나 결혼을 고려할때 이성의 조건을 보는것은 누구에게나 필요하고 아주 현실적인 우리의 자세입니다. 하지만 여기서 우리가 중요하게 생각해야할 것은 인연의 소중함입니다. 사람들은 각기 다른 매력을 지니고 있고, 때로는 예상치 못한 만남 속에서 진정한 행복을 찾을 수 있습니다. 조금씩 기대를 낮추고 열린 마음으로 사람들을 만나보세요. 숫자나 조건으로 판단하는 것만으로는 진정한 인연을 찾기 어렵습니다. 사랑은 생각보다 예측 불가능한 것이며, 때로는 조건에 맞지 않더라도 함께 있을 때 행복을 느낄 수 있는 사람이 최고의 인연일 수 있습니다. 완벽한 이상형을 찾는 것도 좋지만, 조금씩 마음의 문을 열고 다양한 사람들과의 만남을 즐겨보세요. 관계는 함께 쌓아가는 것이며, 서로의 장점과 단점을 이해하고 보듬어주는 과정에서 사랑이 깊어질 수 있습니다.`;
+
+            // Display selected options
+            const selectedOptions = JSON.parse(sessionStorage.getItem('selectedOptions')) || [];
+            const optionsList = document.getElementById('selectedOptions');
+            selectedOptions.forEach(option => {
+                const li = document.createElement('li');
+                li.textContent = `✔️`+option;
+                optionsList.appendChild(li);
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            // Randomly select an image from result1.jpg to result23.jpg
+            const randomImageNumber = Math.floor(Math.random() * 23) + 1; // Generates a number between 1 and 23
+            const randomImagePath = `img/result${randomImageNumber}.jpg`;
+
+            // Set the src of the image
+            document.getElementById('randomImage').src = randomImagePath;
+
+            // Existing code for displaying results goes here
+        });
+    </script>
+    <!-- 공유기능 -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script type='text/javascript'>
+        Kakao.init('217174c0293ad5bcc1ff56a298a731a7');
+        // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+        Kakao.Link.createCustomButton({
+        container: '#kakaotalk-sharing-btn',
+        templateId: 113576
+    });
+    </script>
+    <script>
+        function copyLink() {
+        var copyText = document.getElementById("copy-link");
+        copyText.hidden = false;
+        copyText.select();
+        document.execCommand("copy");
+        copyText.hidden = true;
+        alert("URL을 복사했습니다.");
+      }
+    </script>
+    
+</body>
+<footer class="footer text-center mt-5">
+    <div class="container">
+        <h5 class="text-uppercase">내 남자의 조건</h5>
+        <ul class="list-unstyled mb-0">
+            <li><p>제작/광고문의: hustlin.up@gmail.com</p></li>
+            <li><p class="mb-0">© 2024 허슬업. All rights reserved.</p></li>
+        </ul>
+    </div>
+</footer>
+
+
+</html>

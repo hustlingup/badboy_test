@@ -167,6 +167,7 @@
             <div class="country-label">대한민국</div>
             <div id="resultPercentage"></div>
         </div>
+        <p id="preresultCount"></p>
         <p id="resultCount"></p>
         <img id="randomImage" alt="Result Image" class="img-fluid mb-4" style="max-width: 100%; border-radius: 10px;">
         <p id="advise"></p>
@@ -209,7 +210,8 @@
             const resultPercentage = ((resultCount / totalPopulation) * 100).toFixed(4);
 
             document.getElementById('resultPercentage').textContent = `${resultPercentage}%`;
-            document.getElementById('resultCount').textContent = `(20세~69세 성인남성 18,281,800명 중 ${formattedResultCount}명)`;
+            document.getElementById('preresultCount').textContent = `20세~69세 성인남성 18,281,800명 중`;
+            document.getElementById('resultCount').textContent = `${formattedResultCount}명`;
             document.getElementById('note').textContent = `본 수치는 참고 가능한 분야별 통계자료 내에서 각각 다른년도의 데이터를 조합하고 가공한 결과로 실제와 다를 수 있습니다.`;
             document.getElementById('advise').textContent = `장기적인 만남이나 결혼을 고려할때 이성의 조건을 보는것은 누구에게나 필요하고 아주 현실적인 우리의 자세입니다. 하지만 여기서 우리가 중요하게 생각해야할 것은 인연의 소중함입니다. 사람들은 각기 다른 매력을 지니고 있고, 때로는 예상치 못한 만남 속에서 진정한 행복을 찾을 수 있습니다. 조금씩 기대를 낮추고 열린 마음으로 사람들을 만나보세요. 숫자나 조건으로 판단하는 것만으로는 진정한 인연을 찾기 어렵습니다. 사랑은 생각보다 예측 불가능한 것이며, 때로는 조건에 맞지 않더라도 함께 있을 때 행복을 느낄 수 있는 사람이 최고의 인연일 수 있습니다. 완벽한 이상형을 찾는 것도 좋지만, 조금씩 마음의 문을 열고 다양한 사람들과의 만남을 즐겨보세요. 관계는 함께 쌓아가는 것이며, 서로의 장점과 단점을 이해하고 보듬어주는 과정에서 사랑이 깊어질 수 있습니다.`;
 

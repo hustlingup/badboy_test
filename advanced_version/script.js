@@ -149,7 +149,7 @@ $(document).ready(function() {
                         </div>
                     </div>
                     <div class="result-row">
-                        <div class="text-area">정신병질:</div>
+                        <div class="text-area">싸이코패스:</div>
                         <div class="percentage-area">${results.psychopathy.toFixed(2)}%</div>
                         <div class="gauge-container">
                             <div class="gauge">

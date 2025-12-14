@@ -160,7 +160,7 @@ $(document).ready(function () {
         // Append Psychology section
         $('.result-card').first().after(`
             <div id="psyc" class="psyc-element">
-                <img class="img-fluid mt-5" src="../img/psychology.jpg"> 
+                <img class="img-fluid mt-5" src="../img/psychology.webp"> 
                     <h3><b>연애와 매력의 심리학</b></h3>
                 
                     <h5><b>여성들이 끌리는 나쁜남자</b></h5>

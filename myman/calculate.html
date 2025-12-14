@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -6,400 +5,127 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0825L04287"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-0825L04287');
+        gtag('config', 'G-0825L04287');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>조건 입력</title>
+    <title>조건 입력 - 내 남자의 조건</title>
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            padding-top: 20px;
-            background: linear-gradient(to bottom, #F8F4F2, #FCEEE1); /* Gradient background */
-            font-family: Pretendard, sans-serif;
-        }
-
-        .form-group {
-            margin: 20px 0;
-        }
-
-        .button {
-            padding: 10px 20px;
-        }
-
-        /* Custom styles for responsiveness */
-        .form-container {
-            max-width: 600px; /* Optional: Limit max width for larger screens */
-        }
-    </style>
-
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/favicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="img/logo.png"></head>
-
-<body>
-    <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
-            <a class="navbar-brand" href="https://badboytest.info/">
-                <img src="../img/logo.png" alt="Logo" width="40" height="40">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-               <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://badboytest.info/index.html">나쁜남자 테스트 일반버전</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://badboytest.info/advanced_version/index.html">나쁜남자 테스트 심화버전</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://badboytest.info/myman/index.html">내 남자의 조건</a>
-                </li>
-            </ul>
-            </div>
-        </nav>
-    <div class="container">
-        <h1 class="text-center mb-4">조건 입력</h1>
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-12 form-container">
-                <form id="criteriaForm">
-                    <div class="row mb-3">
-                        <div class="col-sm-12">
-                            <input type="checkbox" id="excludeMarried" name="excludeMarried" class="form-check-input">
-                            <label for="excludeMarried" class="form-check-label">유부남 제외</label>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label for="age" class="form-label"><b>내가 원하는 남자의 나이는?</b></label>
-                        <div class="col-sm-12">
-                            <select id="age" name="age" class="form-select">
-                                <option value="">--선택하세요--</option>
-                                <option value="0.0914">20~24</option>
-                                <option value="0.0992">25~29</option>
-                                <option value="0.0864">30~34</option>
-                                <option value="0.1007">35~39</option>
-                                <option value="0.1044">40~44</option>
-                                <option value="0.1162">45~49</option>
-                                <option value="0.1165">50~54</option>
-                                <option value="0.1122">55~59</option>
-                                <option value="0.1023">60~64</option>
-                                <option value="0.0707">65~69</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label class="form-label"><b>내가 원하는 남자의 키는?</b></label>
-                        <div class="col-sm-12">
-                            <div class="form-check">
-                                <input type="radio" name="height" value="0.11" class="form-check-input">
-                                <label class="form-check-label">180cm 이상</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" name="height" value="0.24" class="form-check-input">
-                                <label class="form-check-label">179~175cm</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" name="height" value="0.33" class="form-check-input">
-                                <label class="form-check-label">174~170cm</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" name="height" value="0.33" class="form-check-input">
-                                <label class="form-check-label">170cm 미만</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label class="form-label"><b>내가 원하는 남자의 체중은?</b></label>
-                        <div class="col-sm-12">
-                            <div class="form-check">
-                                <input type="radio" name="weight" value="1.00" class="form-check-input">
-                                <label class="form-check-label">비만도 괜찮아요</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" name="weight" value="0.54" class="form-check-input">
-                                <label class="form-check-label">통통해도 좋아요</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" name="weight" value="0.26" class="form-check-input">
-                                <label class="form-check-label">정상 체중이 좋아요</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label for="income" class="form-label"><b>내가 원하는 남자의 월 수익은?</b></label>
-                        <div class="col-sm-12">
-                            <select id="income" name="income" class="form-select">
-                                <option value="">--선택하세요--</option>
-                                <option value="1">85만원 이상</option>
-                                <option value="0.817">150만원 이상</option>
-                                <option value="0.637">250만원 이상</option>
-                                <option value="0.451">350만원 이상</option>
-                                <option value="0.321">450만원 이상</option>
-                                <option value="0.230">550만원 이상</option>
-                                <option value="0.167">650만원 이상</option>
-                                <option value="0.100">800만원 이상</option>
-                                <option value="0.054">1,000만원 이상</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label for="location" class="form-label"><b>내가 원하는 남자의 거주지는?</b></label>
-                        <div class="col-sm-12">
-                            <select id="location" name="location" class="form-select">
-                                <option value="">--선택하세요--</option>
-                                <option value="0.18">서울</option>
-                                <option value="0.27">경기도</option>
-                                <option value="0.05">대구</option>
-                                <option value="0.06">인천</option>
-                                <option value="0.03">광주</option>
-                                <option value="0.02">대전</option>
-                                <option value="0.06">부산</option>
-                                <option value="0.02">울산</option>
-                                <option value="0.01">세종</option>
-                                <option value="0.03">강원</option>
-                                <option value="0.03">충북</option>
-                                <option value="0.04">충남</option>
-                                <option value="0.03">전북</option>
-                                <option value="0.04">전남</option>
-                                <option value="0.05">경북</option>
-                                <option value="0.06">경남</option>
-                                <option value="0.01">제주</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <div class="col-sm-12 text-center">
-                            <button type="button" class="btn btn-primary button" onclick="calculateResult()">결과 보기</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        document.getElementById('excludeMarried').addEventListener('change', function () {
-            const ageSelect = document.getElementById('age');
-            ageSelect.innerHTML = this.checked ? `
-                <option value="">--선택하세요--</option>
-                <option value="0.0907">20~24</option>
-                <option value="0.0921">25~29</option>
-                <option value="0.0580">30~34</option>
-                <option value="0.0407">35~39</option>
-                <option value="0.0333">40~44</option>
-                <option value="0.0329">45~49</option>
-                <option value="0.0282">50~54</option>
-                <option value="0.0226">55~59</option>
-                <option value="0.0180">60~64</option>
-                <option value="0.0114">65~69</option>
-            ` : `
-                <option value="">--선택하세요--</option>
-                <option value="0.0914">20~24</option>
-                <option value="0.0992">25~29</option>
-                <option value="0.0864">30~34</option>
-                <option value="0.1007">35~39</option>
-                <option value="0.1044">40~44</option>
-                <option value="0.1162">45~49</option>
-                <option value="0.1165">50~54</option>
-                <option value="0.1122">55~59</option>
-                <option value="0.1023">60~64</option>
-                <option value="0.0707">65~69</option>
-            `;
-        });
-
-        function calculateResult() {
-            const form = document.getElementById('criteriaForm');
-            const formData = new FormData(form);
-
-            let totalPercentage = 1;
-            const selectedOptions = [];
-            formData.forEach((value, key) => {
-                if (key !== 'excludeMarried') { // exclude the checkbox from calculation
-                    totalPercentage *= parseFloat(value) || 1; // default to 1 if parse fails
-                    
-                    let optionText;
-                    if (form.querySelector(`[name="${key}"]:checked`)) {
-                        // For radio inputs like height and weight
-                        optionText = form.querySelector(`[name="${key}"]:checked`).nextElementSibling.textContent.trim();
-                    } else if (form.querySelector(`[name="${key}"] option:checked`)) {
-                        // For select inputs like age, income, location
-                        optionText = form.querySelector(`[name="${key}"] option:checked`).textContent.trim();
-                    }
-                    
-                    if (optionText) {
-                        selectedOptions.push(`${optionText} (${(parseFloat(value) * 100).toFixed(2)}%)`);
-                    }
-                } else if (key === 'excludeMarried' && form.querySelector('[name="excludeMarried"]').checked) {
-                    selectedOptions.push('유부남 제외');
-                }
-            });
-
-            const totalPopulation = 18281800;
-            const resultCount = totalPopulation * totalPercentage;
-
-            sessionStorage.setItem('resultCount', resultCount.toFixed(0));
-            sessionStorage.setItem('selectedOptions', JSON.stringify(selectedOptions));
-            window.location.href = 'result.html';
-        }
-
-    </script>
-</body>
-</html>
-=======
-<!DOCTYPE html>
-<html lang="ko">
-
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0825L04287"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-0825L04287');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>조건 입력</title>
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            padding-top: 20px;
-            background: linear-gradient(to bottom, #F8F4F2, #FCEEE1); /* Gradient background */
-            font-family: Pretendard, sans-serif;
-        }
-
-        .form-group {
-            margin: 20px 0;
-        }
-
-        .button {
-            padding: 10px 20px;
-        }
-
-        /* Custom styles for responsiveness */
-        .form-container {
-            max-width: 600px; /* Optional: Limit max width for larger screens */
-        }
-    </style>
+    <link rel="apple-touch-icon" href="img/logo.png">
 </head>
 
 <body>
     <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
             <a class="navbar-brand" href="https://badboytest.info/">
-                <img src="../img/logo.png" alt="Logo" width="40" height="40">
+                <img src="../img/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2">
+                BADBOY
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-               <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://badboytest.info/index.html">나쁜남자 테스트 일반버전</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://badboytest.info/advanced_version/index.html">나쁜남자 테스트 심화버전</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://badboytest.info/myman/index.html">내 남자의 조건</a>
-                </li>
-            </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://badboytest.info/index.html">일반버전</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://badboytest.info/advanced_version/index.html">심화버전</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://badboytest.info/myman/index.html">내 남자의 조건</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    <div class="container">
-        <h1 class="text-center mb-4">조건 입력</h1>
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-12 form-container">
-                <form id="criteriaForm">
-                    <div class="row mb-3">
-                        <div class="col-sm-12">
-                            <input type="checkbox" id="excludeMarried" name="excludeMarried" class="form-check-input">
-                            <label for="excludeMarried" class="form-check-label">유부남 제외</label>
-                        </div>
-                    </div>
+        </div>
+    </nav>
 
-                    <div class="row mb-3">
-                        <label for="age" class="form-label"><b>내가 원하는 남자의 나이는?</b></label>
-                        <div class="col-sm-12">
+    <div class="container" style="margin-top: 100px;">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="glass-card">
+                    <h3 class="text-center mb-4">이상형 조건 입력 💖</h3>
+                    <p class="text-center text-muted mb-5">당신이 원하는 조건을 솔직하게 선택해주세요.</p>
+
+                    <form id="criteriaForm">
+                        <div class="mb-4 text-center">
+                            <div class="form-check form-switch d-inline-block text-start p-3 rounded"
+                                style="background: rgba(255,255,255,0.5); border: 1px solid rgba(200,200,200,0.3);">
+                                <input class="form-check-input" type="checkbox" id="excludeMarried"
+                                    name="excludeMarried" style="cursor: pointer;">
+                                <label class="form-check-label ms-2" for="excludeMarried"
+                                    style="font-weight: 600; cursor: pointer;">💍 유부남 제외하기</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="age" class="form-label fw-bold mb-2">🎂 나이는?</label>
                             <select id="age" name="age" class="form-select">
-                                <option value="">--선택하세요--</option>
-                                <option value="0.0914">20~24</option>
-                                <option value="0.0992">25~29</option>
-                                <option value="0.0864">30~34</option>
-                                <option value="0.1007">35~39</option>
-                                <option value="0.1044">40~44</option>
-                                <option value="0.1162">45~49</option>
-                                <option value="0.1165">50~54</option>
-                                <option value="0.1122">55~59</option>
-                                <option value="0.1023">60~64</option>
-                                <option value="0.0707">65~69</option>
+                                <option value="">선택해주세요</option>
+                                <option value="0.0914">20~24세</option>
+                                <option value="0.0992">25~29세</option>
+                                <option value="0.0864">30~34세</option>
+                                <option value="0.1007">35~39세</option>
+                                <option value="0.1044">40~44세</option>
+                                <option value="0.1162">45~49세</option>
+                                <option value="0.1165">50~54세</option>
+                                <option value="0.1122">55~59세</option>
+                                <option value="0.1023">60~64세</option>
+                                <option value="0.0707">65~69세</option>
                             </select>
                         </div>
-                    </div>
 
-                    <div class="row mb-3">
-                        <label class="form-label"><b>내가 원하는 남자의 키는?</b></label>
-                        <div class="col-sm-12">
-                            <div class="form-check">
-                                <input type="radio" name="height" value="0.11" class="form-check-input">
-                                <label class="form-check-label">180cm 이상</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" name="height" value="0.24" class="form-check-input">
-                                <label class="form-check-label">179~175cm</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" name="height" value="0.33" class="form-check-input">
-                                <label class="form-check-label">174~170cm</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" name="height" value="0.33" class="form-check-input">
-                                <label class="form-check-label">170cm 미만</label>
+                        <div class="mb-4">
+                            <label class="form-label fw-bold mb-2">📏 키는?</label>
+                            <div class="d-grid gap-2">
+                                <input type="radio" class="btn-check" name="height" id="h1" value="0.11"
+                                    autocomplete="off">
+                                <label class="btn btn-outline-romantic" for="h1">180cm 이상</label>
+
+                                <input type="radio" class="btn-check" name="height" id="h2" value="0.24"
+                                    autocomplete="off">
+                                <label class="btn btn-outline-romantic" for="h2">175~179cm</label>
+
+                                <input type="radio" class="btn-check" name="height" id="h3" value="0.33"
+                                    autocomplete="off">
+                                <label class="btn btn-outline-romantic" for="h3">170~174cm</label>
+
+                                <input type="radio" class="btn-check" name="height" id="h4" value="0.33"
+                                    autocomplete="off">
+                                <label class="btn btn-outline-romantic" for="h4">170cm 미만</label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="row mb-3">
-                        <label class="form-label"><b>내가 원하는 남자의 체중은?</b></label>
-                        <div class="col-sm-12">
-                            <div class="form-check">
-                                <input type="radio" name="weight" value="1.00" class="form-check-input">
-                                <label class="form-check-label">비만도 괜찮아요</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" name="weight" value="0.54" class="form-check-input">
-                                <label class="form-check-label">통통해도 좋아요</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="radio" name="weight" value="0.26" class="form-check-input">
-                                <label class="form-check-label">정상 체중이 좋아요</label>
+                        <div class="mb-4">
+                            <label class="form-label fw-bold mb-2">⚖️ 체형은?</label>
+                            <div class="d-grid gap-2">
+                                <input type="radio" class="btn-check" name="weight" id="w1" value="1.00"
+                                    autocomplete="off">
+                                <label class="btn btn-outline-romantic" for="w1">상관없음 (비만 포함)</label>
+
+                                <input type="radio" class="btn-check" name="weight" id="w2" value="0.54"
+                                    autocomplete="off">
+                                <label class="btn btn-outline-romantic" for="w2">통통해도 괜찮아요</label>
+
+                                <input type="radio" class="btn-check" name="weight" id="w3" value="0.26"
+                                    autocomplete="off">
+                                <label class="btn btn-outline-romantic" for="w3">정상 체중 선호</label>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="row mb-3">
-                        <label for="income" class="form-label"><b>내가 원하는 남자의 월 수익은?</b></label>
-                        <div class="col-sm-12">
+                        <div class="mb-4">
+                            <label for="income" class="form-label fw-bold mb-2">💰 월 수익은? (세전)</label>
                             <select id="income" name="income" class="form-select">
-                                <option value="">--선택하세요--</option>
+                                <option value="">선택해주세요</option>
                                 <option value="1">85만원 이상</option>
                                 <option value="0.817">150만원 이상</option>
                                 <option value="0.637">250만원 이상</option>
@@ -411,13 +137,11 @@
                                 <option value="0.054">1,000만원 이상</option>
                             </select>
                         </div>
-                    </div>
 
-                    <div class="row mb-3">
-                        <label for="location" class="form-label"><b>내가 원하는 남자의 거주지는?</b></label>
-                        <div class="col-sm-12">
+                        <div class="mb-5">
+                            <label for="location" class="form-label fw-bold mb-2">📍 거주지는?</label>
                             <select id="location" name="location" class="form-select">
-                                <option value="">--선택하세요--</option>
+                                <option value="">선택해주세요</option>
                                 <option value="0.18">서울</option>
                                 <option value="0.27">경기도</option>
                                 <option value="0.05">대구</option>
@@ -437,14 +161,14 @@
                                 <option value="0.01">제주</option>
                             </select>
                         </div>
-                    </div>
 
-                    <div class="row mb-3">
-                        <div class="col-sm-12 text-center">
-                            <button type="button" class="btn btn-primary button" onclick="calculateResult()">결과 보기</button>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-romantic w-100 py-3" onclick="calculateResult()">
+                                결과 확인하기 💘
+                            </button>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -456,29 +180,29 @@
         document.getElementById('excludeMarried').addEventListener('change', function () {
             const ageSelect = document.getElementById('age');
             ageSelect.innerHTML = this.checked ? `
-                <option value="">--선택하세요--</option>
-                <option value="0.0907">20~24</option>
-                <option value="0.0921">25~29</option>
-                <option value="0.0580">30~34</option>
-                <option value="0.0407">35~39</option>
-                <option value="0.0333">40~44</option>
-                <option value="0.0329">45~49</option>
-                <option value="0.0282">50~54</option>
-                <option value="0.0226">55~59</option>
-                <option value="0.0180">60~64</option>
-                <option value="0.0114">65~69</option>
+                <option value="">선택해주세요</option>
+                <option value="0.0907">20~24세</option>
+                <option value="0.0921">25~29세</option>
+                <option value="0.0580">30~34세</option>
+                <option value="0.0407">35~39세</option>
+                <option value="0.0333">40~44세</option>
+                <option value="0.0329">45~49세</option>
+                <option value="0.0282">50~54세</option>
+                <option value="0.0226">55~59세</option>
+                <option value="0.0180">60~64세</option>
+                <option value="0.0114">65~69세</option>
             ` : `
-                <option value="">--선택하세요--</option>
-                <option value="0.0914">20~24</option>
-                <option value="0.0992">25~29</option>
-                <option value="0.0864">30~34</option>
-                <option value="0.1007">35~39</option>
-                <option value="0.1044">40~44</option>
-                <option value="0.1162">45~49</option>
-                <option value="0.1165">50~54</option>
-                <option value="0.1122">55~59</option>
-                <option value="0.1023">60~64</option>
-                <option value="0.0707">65~69</option>
+                <option value="">선택해주세요</option>
+                <option value="0.0914">20~24세</option>
+                <option value="0.0992">25~29세</option>
+                <option value="0.0864">30~34세</option>
+                <option value="0.1007">35~39세</option>
+                <option value="0.1044">40~44세</option>
+                <option value="0.1162">45~49세</option>
+                <option value="0.1165">50~54세</option>
+                <option value="0.1122">55~59세</option>
+                <option value="0.1023">60~64세</option>
+                <option value="0.0707">65~69세</option>
             `;
         });
 
@@ -491,18 +215,20 @@
             formData.forEach((value, key) => {
                 if (key !== 'excludeMarried') { // exclude the checkbox from calculation
                     totalPercentage *= parseFloat(value) || 1; // default to 1 if parse fails
-                    
+
                     let optionText;
                     if (form.querySelector(`[name="${key}"]:checked`)) {
                         // For radio inputs like height and weight
-                        optionText = form.querySelector(`[name="${key}"]:checked`).nextElementSibling.textContent.trim();
+                        // Use the label text associated with the radio button
+                        const id = form.querySelector(`[name="${key}"]:checked`).id;
+                        optionText = form.querySelector(`label[for="${id}"]`).textContent.trim();
                     } else if (form.querySelector(`[name="${key}"] option:checked`)) {
                         // For select inputs like age, income, location
                         optionText = form.querySelector(`[name="${key}"] option:checked`).textContent.trim();
                     }
-                    
-                    if (optionText) {
-                        selectedOptions.push(`${optionText} (${(parseFloat(value) * 100).toFixed(2)}%)`);
+
+                    if (optionText && optionText !== "선택해주세요") {
+                        selectedOptions.push(`${optionText}`);
                     }
                 } else if (key === 'excludeMarried' && form.querySelector('[name="excludeMarried"]').checked) {
                     selectedOptions.push('유부남 제외');
@@ -519,5 +245,5 @@
 
     </script>
 </body>
+
 </html>
->>>>>>> 8611c15c9531c30547d0fd916076970a4704c432

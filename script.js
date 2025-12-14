@@ -93,9 +93,10 @@ $(document).ready(function () {
         updateProgressBar();
     }
 
-    $('#result-container').append(`
+    if ($('#result-container').length > 0) {
+        $('.result-card').first().after(`
         <div id="psyc" class="psyc-element">
-            <img class="img-fluid mt-5" src="../img/psychology.jpg"> 
+            <img class="img-fluid mt-5" src="img/psychology.jpg"> 
                 <h3><b>연애와 매력의 심리학</b></h3>
             
                 <h5><b>여성들이 끌리는 나쁜남자</b></h5>
@@ -120,7 +121,7 @@ $(document).ready(function () {
                 
                 <h5><b>지위와 공감 능력</b></h5>
                 <p>사람의 지위가 올라갈수록 공감 능력이 떨어지고 사이코패스화된다는 연구 결과가 있습니다. 
-                심리학자들은 회사의 지위에 따라 공감 능력을 테스트해보았으며, 지위가 높을수록 공감 능력이 떨어진다는 결과를 얻었습니다. 
+                심리학자들은 회사의 지위에 따라 공감 능력이 떨어진다는 결과를 얻었습니다. 
                 미국 연구에서는 농부들이 수확 시기에 공감 능력이 떨어진다는 결과도 있습니다. 또한, 고급차일수록 교통법규를 지키지 않는 경우가 많았습니다.</p>
                 
                 <h5><b>사회적 상처와 눈치</b></h5>
@@ -152,4 +153,5 @@ $(document).ready(function () {
         </div>
         
     `);
+    }
 });

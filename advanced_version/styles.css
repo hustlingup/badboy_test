@@ -28,7 +28,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: var(--bg-color) !important;
+    background-color: #ffffff !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     padding: 1rem 1.5rem;
 }
@@ -436,4 +436,46 @@ body {
 .gauge-label {
     text-align: center;
     margin-top: 5px;
+}
+
+/* Psychology Section */
+.psyc-element {
+    background: var(--bg-color);
+    border-radius: 30px;
+    padding: 2rem;
+    box-shadow: var(--shadow-dark), var(--shadow-light);
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.psyc-element img {
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    width: 100%;
+    box-shadow: var(--shadow-inset);
+}
+
+.psyc-element h3 {
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.psyc-element h5 {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 10px;
+}
+
+.psyc-element p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
 }

@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Pretendard:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg-color: #FDFBF7;
+    --primary-color: #800020;
+    /* Deep Burgundy */
+    --secondary-color: #A03040;
+    --accent-color: #D4AF37;
+    /* Goldish */
+    --text-color: #4A4A4A;
+    --text-muted: #888;
+    --card-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.8);
+    --shadow: 0 8px 32px 0 rgba(100, 30, 30, 0.05);
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Pretendard', sans-serif;
+    color: var(--text-color);
+    /* Subtle romantic background blobs */
+    background-image:
+        radial-gradient(circle at 0% 0%, rgba(255, 200, 200, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 100% 100%, rgba(255, 220, 210, 0.2) 0%, transparent 40%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand,
+.serif-font {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(220, 200, 200, 0.3);
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 500;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: var(--glass-border);
+    box-shadow: var(--shadow);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Buttons */
+.btn-romantic {
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 0.8rem 2.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(128, 0, 32, 0.2);
+}
+
+.btn-romantic:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    box-shadow: 0 2px 10px rgba(128, 0, 32, 0.1);
+}
+
+.btn-outline-romantic {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 0.8rem 2.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-romantic:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Form Elements */
+.form-control,
+.form-select {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(200, 180, 180, 0.5);
+    border-radius: 10px;
+    padding: 0.8rem;
+    font-family: 'Pretendard', sans-serif;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(128, 0, 32, 0.15);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    background: transparent;
+    border-top: 1px solid rgba(220, 200, 200, 0.3);
+    padding: 2rem 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Specific Page Styles */
+.hero-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+#resultPercentage {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.country-label {
+    font-family: 'Pretendard', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.option-list li {
+    font-family: 'Pretendard', sans-serif;
+    color: var(--text-color);
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(128, 0, 32, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .glass-card {
+        padding: 1.5rem;
+    }
+
+    #resultPercentage {
+        font-size: 2.5rem;
+    }
+}

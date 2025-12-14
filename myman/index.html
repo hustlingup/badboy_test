@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0825L04287"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-0825L04287');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="내 남자의 조건">
+    <meta name="keywords" content="남자조건,내남자의조건,한국남자,남자찾기,이상형,이상형조건">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="내 남자의 조건">
+    <meta property="og:description" content="내 남자의 조건">
+    <meta property="og:image" content="main.png">
+    <meta name="google-site-verification" content="pDNFIWFtpQ3EU9OhxVNdbXD12VbDJ9Qh6GiJp1xZFFw">
+
+    <title>내 남자의 조건</title>
+    <style>
+        body {
+            font-family: Pretendard, sans-serif;
+            background: linear-gradient(to bottom, #F8F4F2, #FCEEE1);
+            /* Gradient background */
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 500px;
+            /* Limits width on larger screens */
+            margin: auto;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            /* Soft shadow */
+        }
+
+        .main-image {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+        }
+
+        .footer {
+            padding: 20px;
+            background-color: #F8F4F2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+            <a class="navbar-brand" href="https://badboytest.info/">
+                <img src="../img/logo.png" alt="Logo" width="40" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://badboytest.info/index.html">나쁜남자 테스트 일반버전</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://badboytest.info/advanced_version/index.html">나쁜남자 테스트 심화버전</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://badboytest.info/myman/index.html">내 남자의 조건</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content Container -->
+        <div class="main-container mb-3">
+            <!-- Main image -->
+            <img src="img/main.jpg" alt="Main Image" class="main-image mx-auto d-block mb-3">
+
+            <!-- Intro text -->
+            <p class="mt-3">당신이 꿈꾸는 조건의 남자는 한국에 몇 명이나 있을지, 궁금하지 않나요?🤔<br>지금 바로 확인해볼까요?!</p>
+
+            <!-- Start Button -->
+            <button class="btn btn-primary btn-lg mt-3" onclick="window.location.href='calculate.html'">시작하기!</button>
+
+            <!-- Visit Counter -->
+            <div id="visit-counter" class="mt-3"
+                style="font-family: 'Electrolize', sans-serif; font-size: 20px; color: #000000; background-color: #f0f0f0; padding: 10px; display: inline-block; border-radius: 5px;">
+                Total visits : <span id="counter-value">Loading...</span>
+            </div>
+        </div>
+
+        <!-- Sharing Section -->
+        <div class="container text-center mt-3">
+            <h5><b>공유하기</b></h5>
+            <input type="text" value="https://badboytest.info/myman/index.html" id="copy-link" hidden>
+            <img src="../img/copylink.png" height="70" width="70" onclick="copyLink()">
+            <a id="kakaotalk-sharing-btn" href="javascript:;">
+                <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+                    alt="카카오톡 공유 보내기 버튼" />
+            </a>
+        </div>
+
+        <!-- Data Source Information -->
+        <div class="main-container mt-2">
+            <h5 class="mt-2"><b>데이터 출처</b></h5>
+            <p>인구정보: 「인구총조사」, 통계청</p>
+            <p>연령정보: 「인구총조사」, 통계청</p>
+            <p>신체정보: 제8차 인체치수조사, 국가기술표준원</p>
+            <p>소득정보: 「일자리행정통계」, 통계청</p>
+            <p>지역정보: 「주민등록인구현황」, 행정안전부</p>
+        </div>
+    </div>
+
+    <!-- Kakao Sharing Script -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+        Kakao.init('217174c0293ad5bcc1ff56a298a731a7');
+        Kakao.Link.createCustomButton({
+            container: '#kakaotalk-sharing-btn',
+            templateId: 113576
+        });
+    </script>
+    <script>
+        function copyLink() {
+            var copyText = document.getElementById("copy-link");
+            copyText.hidden = false;
+            copyText.select();
+            document.execCommand("copy");
+            copyText.hidden = true;
+            alert("URL을 복사했습니다.");
+        }
+    </script>
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeCounter } from '../firebase-config.js';  // CORRECT PATH
+        initializeCounter('counters/myman');  // CORRECT COUNTER
+    </script>
+</body>
+<footer class="footer text-center mt-5">
+    <div class="container">
+        <h5 class="text-uppercase">내 남자의 조건</h5>
+        <ul class="list-unstyled mb-0">
+            <li>
+                <p>제작/광고문의: hustlin.up@gmail.com</p>
+            </li>
+            <li>
+                <p class="mb-0">© 2024 허슬업. All rights reserved.</p>
+            </li>
+        </ul>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

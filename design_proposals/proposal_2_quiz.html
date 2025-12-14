@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나쁜남자 테스트 질문 - Soft Pop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f0f4f8;
+            --card-bg: #ffffff;
+            --primary-color: #ff6b6b;
+            --secondary-color: #4ecdc4;
+            --text-color: #2d3436;
+            --text-muted: #636e72;
+            --shadow-light: -10px -10px 20px #ffffff;
+            --shadow-dark: 10px 10px 20px #d1d9e6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background: var(--bg-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #e0e5ec;
+        }
+
+        /* Quiz Container */
+        .quiz-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            background-color: #e0e5ec;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            height: 20px;
+            box-shadow: inset 5px 5px 10px #d1d9e6, inset -5px -5px 10px #ffffff;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: var(--secondary-color);
+            width: 40%;
+            /* Example width */
+            border-radius: 20px;
+            transition: width 0.5s ease;
+            box-shadow: 2px 0 10px rgba(78, 205, 196, 0.4);
+        }
+
+        /* Question */
+        .question-card {
+            background: var(--bg-color);
+            border-radius: 30px;
+            padding: 2rem;
+            box-shadow: var(--shadow-dark), var(--shadow-light);
+            margin-bottom: 2rem;
+        }
+
+        .question-number {
+            color: var(--primary-color);
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .question-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+        }
+
+        /* Options */
+        .options-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .option-btn {
+            background: var(--bg-color);
+            border: none;
+            padding: 1.5rem;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            color: var(--text-color);
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: var(--shadow-dark), var(--shadow-light);
+            transition: all 0.2s ease;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        .option-btn:hover {
+            transform: translateY(-3px);
+            color: var(--primary-color);
+        }
+
+        .option-btn:active {
+            transform: translateY(0);
+            box-shadow: inset 5px 5px 10px #d1d9e6, inset -5px -5px 10px #ffffff;
+        }
+
+        .option-marker {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #e0e5ec;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            box-shadow: inset 2px 2px 5px #d1d9e6, inset -2px -2px 5px #ffffff;
+        }
+
+        .option-btn:hover .option-marker {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: none;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-muted);
+            margin-top: 4rem;
+            background: #e6ebf1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo" width="30" height="30">
+            BADBOY
+        </div>
+        <div class="nav-links">
+            <a href="#">일반버전</a>
+            <a href="#">심화버전</a>
+        </div>
+    </nav>
+
+    <div class="quiz-container">
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+
+        <div class="question-card">
+            <span class="question-number">Q4.</span>
+            <h2 class="question-text">그가 당신의 연락을 받지 않을 때, 나중에 뭐라고 변명하나요?</h2>
+        </div>
+
+        <div class="options-grid">
+            <button class="option-btn">
+                <span class="option-marker">A</span>
+                바빴다고 미안해하며 바로 설명한다.
+            </button>
+            <button class="option-btn">
+                <span class="option-marker">B</span>
+                별일 아니라는 듯 대충 넘어간다.
+            </button>
+            <button class="option-btn">
+                <span class="option-marker">C</span>
+                오히려 왜 자꾸 연락하냐며 화를 낸다.
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 BAD BOY TEST. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

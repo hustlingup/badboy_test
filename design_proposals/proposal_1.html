@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나쁜남자 테스트 - Premium Dark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --primary-color: #8b5cf6;
+            --secondary-color: #ec4899;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.15) 0%, transparent 40%);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+            border: 1px solid var(--glass-border);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: 100%;
+            max-width: 350px;
+            margin-bottom: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid var(--glass-border);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Stats */
+        .stats {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 15px;
+            display: inline-block;
+            margin-bottom: 2rem;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(5px);
+        }
+
+        /* Grid for Results */
+        .results-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .result-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s;
+        }
+
+        .result-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .result-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .result-content {
+            padding: 1.5rem;
+        }
+
+        .result-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .result-content p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--glass-border);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo" width="30" height="30">
+            BAD BOY TEST
+        </div>
+        <div class="nav-links">
+            <a href="#">일반버전</a>
+            <a href="#">심화버전</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <img src="../img/main.png" alt="Main Image" class="hero-img">
+        <h1>나쁜 남자에게 끌리는 당신,<br>얼마나 위험한가요?</h1>
+        <p>내가 관심있는 그는 얼마나 나쁜남자일까요? <br>지금 바로 테스트해보세요! 설마 당신의 그 남자도...?</p>
+
+        <div class="stats">
+            Total visits: <span style="color: var(--secondary-color); font-weight: bold;">1,234,567</span>
+        </div>
+
+        <div>
+            <button class="btn btn-primary">테스트 시작하기</button>
+            <button class="btn btn-secondary">✨ 심화버전 하러가기</button>
+            <button class="btn btn-secondary">내 남자의 조건</button>
+        </div>
+    </section>
+
+    <section class="results-section">
+        <h2 class="section-title">모든 유형 둘러보기</h2>
+        <div class="results-grid">
+            <!-- Sample Cards -->
+            <div class="result-card">
+                <img src="../img/result_0.jpg" alt="Result 0">
+                <div class="result-content">
+                    <h3>순도 100% 착한남자</h3>
+                    <p>항상 당신을 먼저 생각하고, 배려심이 넘쳐요. 나쁜남자와는 거리가 먼 천사 같은 존재입니다.</p>
+                </div>
+            </div>
+            <div class="result-card">
+                <img src="../img/result_5.jpg" alt="Result 5">
+                <div class="result-content">
+                    <h3>나쁘다고 할 수 없는 나쁜남자!</h3>
+                    <p>조금 나쁜남자 스럽지만, 이정도는 걱정할 필요 없어요. 그가 하는 모든 행동은 사실 당신의 관심을 끌기 위한 것일지도 몰라요.</p>
+                </div>
+            </div>
+            <div class="result-card">
+                <img src="../img/result_12.jpg" alt="Result 12">
+                <div class="result-content">
+                    <h3>두 얼굴의 남자!</h3>
+                    <p>이 남자는 정확히 절반은 나쁜남자, 절반은 좋은 남자네요. 그가 가진 두 가지 매력에 당신은 늘 두근두근할 거예요.</p>
+                </div>
+            </div>
+            <div class="result-card">
+                <img src="../img/result_24.jpg" alt="Result 24">
+                <div class="result-content">
+                    <h3>슈퍼빌런 나쁜놈!</h3>
+                    <p>나쁜남자라는 단어는 이 남자를 위해 만들어졌어요. 옴므파탈 그 자체 최상위 포식자.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 BAD BOY TEST. All rights reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">제작/광고문의: hustlin.up@gmail.com</p>
+    </footer>
+
+</body>
+
+</html>

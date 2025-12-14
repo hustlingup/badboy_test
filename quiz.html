@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0825L04287"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-0825L04287');
+        gtag('config', 'G-0825L04287');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나쁜남자 테스트 질문</title>
+    <!-- Bootstrap CSS (kept for grid/layout, overridden by styles.css) -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-</head>
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/logo.png"></head>
+
 <body>
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="https://badboytest.info/">
-            <img src="../img/logo.png" alt="Logo" width="40" height="40">
+            <img src="img/logo.png" alt="Logo" width="40" height="40">
+            BADBOY
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,11 +43,13 @@
             </ul>
         </div>
     </nav>
-    <div class="container text-center mt-5">
-        <div class="progress mb-3" style="height: 25px;">
-            <div id="progress-bar" class="progress-bar bg-primary" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+    <div class="container mt-5">
+        <div class="progress mb-4">
+            <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-        
+
         <div id="question-container">
             <!-- Questions will be injected here by JavaScript -->
         </div>
@@ -48,23 +57,21 @@
 
     <!-- Include jQuery before script.js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
-<footer class="footer bg-light text-center text-lg-start mt-5">
-    <div class="row">
-        <div class="d-grid gap-2 col-12 col-md-6 mx-auto">
-            <img src="../badboy_test/img/logo.png" alt="Logo" class="img-fluid mb-3">
-            <h5 class="text-uppercase">BAD BOY TEST</h5>
-            <p>나쁜남자 테스트</p>
-            <ul class="list-unstyled mb-0">
-                <li>
-                    <a href="about.html">About</a>
-                    <a href="privacy.html">Privacy</a>
-                    <a href="reference.html">Reference</a>
-                </li>
-                <li><p class="mb-0">© 2024 허슬업. All rights reserved.</p></li>
-            </ul>
+<footer class="footer">
+    <div class="container">
+        <img src="img/logo.png" alt="Logo" class="img-fluid mb-3" width="50">
+        <h5 class="text-uppercase">BAD BOY TEST</h5>
+        <p>나쁜남자 테스트</p>
+        <div class="mt-3">
+            <a href="about.html">About</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="reference.html">Reference</a>
         </div>
+        <p class="mb-0">© 2024 허슬업. All rights reserved.</p>
     </div>
 </footer>
+
 </html>

@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0825L04287"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0825L04287');
+    </script>
+    <meta name="google-site-verification" content="pDNFIWFtpQ3EU9OhxVNdbXD12VbDJ9Qh6GiJp1xZFFw">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6791974364232767"
+        crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="2026년 민방위 사이버 교육 정답 총정리. Ctrl + F 를 이용해 문제와 정답을 빠르고 쉽게 찾아보세요. 민방위 교육 정보 및 재난 안전 가이드 제공.">
@@ -523,5 +535,10 @@
     <!-- Bootstrap & jQuery JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeCounter } from './firebase-config.js';
+        initializeCounter('counters/minbangwi');
+    </script>
 </body>
 </html>
